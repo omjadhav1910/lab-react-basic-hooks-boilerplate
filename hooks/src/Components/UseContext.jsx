@@ -1,22 +1,23 @@
-import {useContext} from 'react'
-import { ToggleTheme } from '../App'
+import { useContext } from "react";
+import { ToggleTheme } from "../App";
 
+function UseContext(){
 
-function UseContext() {
+    const theme = useContext(ToggleTheme)
 
-  const theme = useContext(ToggleTheme)  
-  const themeStyle = {
-    backgroundColor: theme? "black" : "grey",
-    color: theme? "grey" : "black",
-    padding: "2rem",
-    margin: "2rem",
+    const themeStyle = {
+        backgroundColor: theme ? "black" : "grey",
+        color : theme ? "grey" : "black",
+        padding:"2rem",
+        margin:"2rem"
+    }
+
+    return(
+        <div style={themeStyle}>
+            This is made using UseContext
+        </div>
+    )
 }
-  return (
-    <div style={themeStyle}>
-        This is made using useContext 
-    
-    </div>
-  )
-}
+
 
 export default UseContext
